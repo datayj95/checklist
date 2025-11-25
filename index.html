@@ -2,431 +2,186 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>종합목록 최종 산출물 체크리스트</title>
+<meta charset='UTF-8'>
+<title>PM Dashboard Checklist</title>
 <style>
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: #f7f9fb;
+  padding: 20px;
 }
-summary {
-    font-weight: bold;
-    cursor: pointer;
+table {
+  width:100%;
+  border-collapse: collapse;
+  background:white;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
-input[type=checkbox] {
-    margin-right: 8px;
+th,td {
+  padding:10px;
+  border-bottom:1px solid #e0e0e0;
+  font-size:14px;
+}
+th {
+  background:#3268d4;
+  color:white;
+  text-align:left;
+}
+tr:hover {
+  background:#eef3ff;
 }
 </style>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("input[type=checkbox]").forEach((cb, idx) => {
-        const key = "chk_" + idx;
-        cb.checked = localStorage.getItem(key) === "true";
-        cb.addEventListener("change", () => {
-            localStorage.setItem(key, cb.checked);
-        });
-    });
+  document.querySelectorAll("input[type=checkbox]").forEach((cb, i) => {
+    const key = "chk_" + i;
+    cb.checked = localStorage.getItem(key) === "true";
+    cb.addEventListener("change", () => localStorage.setItem(key, cb.checked));
+  });
 });
 </script>
 </head>
 <body>
-<h2>📁 종합목록 최종산출물 체크리스트</h2>
-<p>체크 내용은 자동 저장됩니다.</p>
-<details><summary>1차분류</summary>
-    <details><summary>2차분류</summary>
-        <details><summary>3차분류</summary>
-            <details><summary>4차분류</summary>
-                <details><summary>5차분류</summary>
-                    <div><label><input type="checkbox"> 문서명</label></div>
-                </details>
-            </details>
-        </details>
-    </details>
-</details>
-<details><summary>00. 사업준비</summary>
-    <details><summary>01. RFP</summary>
-        <div><label><input type="checkbox"> 제안요청서(2025년 국가자료종합목록 데이터 품질관리) 최종</label></div>
-    </details>
-</details>
-<details><summary>02. 제안서</summary>
-    <div><label><input type="checkbox"> 2025년 국가자료종합목록 데이터 품질관리 사업_정성적제안서_데이터클립컨소시엄</label></div>
-</details>
-<details><summary>03. 발표자료</summary>
-    <div><label><input type="checkbox"> 2025년 국가자료종합목록 데이터 품질관리 사업_발표자료_데이터클립컨소시엄</label></div>
-</details>
-<details><summary>01. 사업착수</summary>
-    <details><summary>00. 계약</summary>
-        <details><summary>00. 수의시담</summary>
-            <div><label><input type="checkbox"> -</label></div>
-        </details>
-    </details>
-</details>
-<details><summary>01. 계약서</summary>
-    <div><label><input type="checkbox"> 2025년 국자자료종합목록 데이터 품질관리_계약서</label></div>
-</details>
-<details><summary>01. 착수계</summary>
-    <div><label><input type="checkbox"> 착수계</label></div>
-</details>
-<details><summary>02. 사업수행계획서</summary>
-    <div><label><input type="checkbox"> 사업수행계획서</label></div>
-</details>
-<details><summary>02. 사업관리</summary>
-    <details><summary>01. 범위관리</summary>
-        <div><label><input type="checkbox"> 과업대비표</label></div>
-    </details>
-</details>
-<div><label><input type="checkbox"> 요구사항정의서</label></div>
-<div><label><input type="checkbox"> 요구사항명세서</label></div>
-<div><label><input type="checkbox"> 요구사항추적표</label></div>
-<div><label><input type="checkbox"> 검사기준서</label></div>
-<div><label><input type="checkbox"> WBS</label></div>
-<div><label><input type="checkbox"> 품질관리일정계획</label></div>
-<div><label><input type="checkbox"> 인력투입계획서</label></div>
-<div><label><input type="checkbox"> 인력투입현황보고서</label></div>
-<div><label><input type="checkbox"> 출퇴근관리대장</label></div>
-<div><label><input type="checkbox"> [별첨1]교육프로그램</label></div>
-<div><label><input type="checkbox"> [별첨3]교육확인서</label></div>
-<div><label><input type="checkbox"> [별첨3]보안교육자료</label></div>
-<div><label><input type="checkbox"> [별첨4]MARC교육</label></div>
-<div><label><input type="checkbox"> [별첨1]보안서약서</label></div>
-<div><label><input type="checkbox"> [별첨2]개인정보 위탁 보안서약서</label></div>
-<div><label><input type="checkbox"> [별첨3]보안확약서</label></div>
-<div><label><input type="checkbox"> (별첨4)출입대장</label></div>
-<div><label><input type="checkbox"> (별첨5)산출물보안확인대장</label></div>
-<div><label><input type="checkbox"> (별첨6)PC보안관리대장</label></div>
-<div><label><input type="checkbox"> [별첨7]장비관리대장</label></div>
-<div><label><input type="checkbox"> (별첨8)이동식저장장치사용관리대장</label></div>
-<div><label><input type="checkbox"> (별첨9)KOLIS-NET ID 신청서</label></div>
-<div><label><input type="checkbox"> (별첨10)자료관리대장</label></div>
-<div><label><input type="checkbox"> (별첨11)KOLIS-NET ID 삭제요청서</label></div>
-<div><label><input type="checkbox"> 비밀유지 계약서</label></div>
-<div><label><input type="checkbox"> 접근권한신청서_2025년 사업</label></div>
-<div><label><input type="checkbox"> [별첨2]변경관리요청서</label></div>
-<div><label><input type="checkbox"> 형상관리기록서</label></div>
-<div><label><input type="checkbox"> [별첨]모니터링 내역서</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> [별첨]수정요청서</label></div>
-<div><label><input type="checkbox"> 시험공정인수대장</label></div>
-<div><label><input type="checkbox"> 단행자료</label></div>
-<div><label><input type="checkbox"> 연속간행물</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 예외처리리스트</label></div>
-<div><label><input type="checkbox"> 예외처리리스트 상세</label></div>
-<div><label><input type="checkbox"> 구축제외</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 시험공정인수대장</label></div>
-<div><label><input type="checkbox"> 운영서지중복데이터 통합</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<div><label><input type="checkbox"> 국가자료종합목록 데이터 품질관리 지침</label></div>
-<details><summary>02. 일정관리</summary>
-    <details><summary>DB구축일정계획</summary>
-        <div><label><input type="checkbox"> DB구축일정계획</label></div>
-    </details>
-</details>
-<details><summary>03. 인력관리</summary>
-    <details><summary>01. 인력관리지침</summary>
-        <div><label><input type="checkbox"> 인력관리지침서</label></div>
-    </details>
-</details>
-<details><summary>02. 출근부</summary>
-    <div><label><input type="checkbox"> 출근부</label></div>
-</details>
-<details><summary>04. 의사소통관리</summary>
-    <details><summary>01. 회의록</summary>
-        <div><label><input type="checkbox"> 회의록_주간보고</label></div>
-    </details>
-</details>
-<details><summary>02. 착수보고</summary>
-    <div><label><input type="checkbox"> 착수보고</label></div>
-</details>
-<details><summary>03. 중간보고</summary>
-    <div><label><input type="checkbox"> 중간보고</label></div>
-</details>
-<details><summary>04. 완료보고</summary>
-    <div><label><input type="checkbox"> 완료보고</label></div>
-</details>
-<details><summary>05. 정기보고</summary>
-    <details><summary>01. 주간보고</summary>
-        <div><label><input type="checkbox"> 주간보고서</label></div>
-    </details>
-</details>
-<details><summary>02. 월간보고</summary>
-    <div><label><input type="checkbox"> 월간보고서</label></div>
-</details>
-<details><summary>05. 교육관리</summary>
-    <details><summary>01. 교육계획서</summary>
-        <div><label><input type="checkbox"> 교육계획서</label></div>
-    </details>
-</details>
-<details><summary>02. 교육실시현황</summary>
-    <div><label><input type="checkbox"> [별첨2]교육실시현황표</label></div>
-</details>
-<details><summary>03. 교육자료</summary>
-    <div><label><input type="checkbox"> [별첨1]국가자료종합목록 데이터 품질관리 지침</label></div>
-</details>
-<details><summary>06. 보안관리</summary>
-    <details><summary>01. 보안관리지침</summary>
-        <div><label><input type="checkbox"> 보안관리지침서</label></div>
-    </details>
-</details>
-<details><summary>02. 보안관리</summary>
-    <details><summary>KOLIS-NET ID 신청 및 삭제</summary>
-    </details>
-</details>
-<details><summary>보안카드발급</summary>
-</details>
-<details><summary>03. 정보보안점검</summary>
-</details>
-<details><summary>04. 안전보건협의체</summary>
-</details>
-<details><summary>07. 위험관리</summary>
-    <details><summary>01. 위험관리계획서</summary>
-        <div><label><input type="checkbox"> 위험관리계획서</label></div>
-    </details>
-</details>
-<details><summary>02. 위험관리현황</summary>
-    <div><label><input type="checkbox"> [별첨1]위험관리리스트</label></div>
-</details>
-<details><summary>03. 백업 및 장애처리 지침</summary>
-    <div><label><input type="checkbox"> 백업및복구방안</label></div>
-</details>
-<details><summary>04. 백업 및 장애처리 관리대장</summary>
-    <div><label><input type="checkbox"> [별첨1]백업,복구관리대장</label></div>
-</details>
-<details><summary>08. 변경관리</summary>
-    <details><summary>01. 변경관리계획서</summary>
-        <div><label><input type="checkbox"> 변경관리계획서</label></div>
-    </details>
-</details>
-<details><summary>02. 변경관리현황</summary>
-    <div><label><input type="checkbox"> [별첨1]변경관리리스트</label></div>
-</details>
-<details><summary>09. 형상관리</summary>
-    <details><summary>01. 형상관리계획</summary>
-        <div><label><input type="checkbox"> 형상관리계획서</label></div>
-    </details>
-</details>
-<details><summary>02. 문서표준</summary>
-    <div><label><input type="checkbox"> 문서작성표준</label></div>
-</details>
-<details><summary>10. 품질관리</summary>
-    <details><summary>01. 품질관리계획서</summary>
-        <div><label><input type="checkbox"> 품질보증계획서</label></div>
-    </details>
-</details>
-<details><summary>02. 품질보증결과보고서</summary>
-    <div><label><input type="checkbox"> [별첨1]품질보증결과보고서</label></div>
-</details>
-<details><summary>03. 파일분류체계표</summary>
-    <div><label><input type="checkbox"> 파일분류체계표</label></div>
-</details>
-<details><summary>04. 데이터처리현황</summary>
-    <div><label><input type="checkbox"> 데이터처리현황</label></div>
-</details>
-<details><summary>11. 기타</summary>
-    <details><summary>01. 하자보수</summary>
-        <div><label><input type="checkbox"> 하자보수계획서</label></div>
-    </details>
-</details>
-<details><summary>02. 기술이전</summary>
-    <div><label><input type="checkbox"> 기술이전계획서</label></div>
-</details>
-<details><summary>공정관리</summary>
-    <details><summary>01. 참여기관 관리</summary>
-        <details><summary>01. 참여기관 등급관리 및 운영 지원</summary>
-            <details><summary>01. 참여기관 등급별 모니터링</summary>
-                <div><label><input type="checkbox"> 모니터링 내역서</label></div>
-            </details>
-        </details>
-    </details>
-</details>
-<details><summary>02. 수정요청서</summary>
-    <div><label><input type="checkbox"> 수정요청서</label></div>
-</details>
-<details><summary>03. 오류기관 안내</summary>
-    <div><label><input type="checkbox"> 개별 안내 내역서</label></div>
-</details>
-<details><summary>02. 종합목록 서비스 운영 지원</summary>
-    <details><summary>01. 참여기관 담당 사서 워크숍</summary>
-        <div><label><input type="checkbox"> 워크숍 회의록</label></div>
-    </details>
-</details>
-<details><summary>02. 참여기관 대상 설문조사</summary>
-    <div><label><input type="checkbox"> 참여기관 대상_설문조사분석서</label></div>
-</details>
-<details><summary>03. 종합목록 운영 전략 수립 지원</summary>
-    <div><label><input type="checkbox"> KOLIS-NET 기능개선 요청사항</label></div>
-</details>
-<details><summary>04. 대표서지 데이터 모니터링</summary>
-    <details><summary>01. 대표서지 데이터 모니터링</summary>
-        <div><label><input type="checkbox"> 대표서지 모니터링 내역서</label></div>
-    </details>
-</details>
-<details><summary>02. 임시DB 데이터
-품질관리</summary>
-    <details><summary>00. 시험공정</summary>
-        <details><summary>01. 계획</summary>
-            <div><label><input type="checkbox"> 시험공정계획서</label></div>
-        </details>
-    </details>
-</details>
-<details><summary>02. 결과</summary>
-    <div><label><input type="checkbox"> 시험공정결과서</label></div>
-    <div><label><input type="checkbox"> 시험공정결과서</label></div>
-</details>
-<details><summary>01. 자료준비</summary>
-    <details><summary>01. 인수</summary>
-        <div><label><input type="checkbox"> 인수대장</label></div>
-        <div><label><input type="checkbox"> 인수대장</label></div>
-    </details>
-</details>
-<details><summary>02. 자료구축</summary>
-    <details><summary>01. 단행자료</summary>
-        <details><summary>01. 단행자료_중복데이터 처리내역서</summary>
-            <div><label><input type="checkbox"> 처리내역(폴더)</label></div>
-        </details>
-    </details>
-</details>
-<details><summary>02. 단행자료_점검요청서</summary>
-    <div><label><input type="checkbox"> 점검요청서</label></div>
-</details>
-<details><summary>03. 단행자료_재점검요청서</summary>
-    <div><label><input type="checkbox"> 재점검요청서</label></div>
-</details>
-<details><summary>02. 연속간행물</summary>
-    <details><summary>01. 연속간행물_처리내역서</summary>
-        <div><label><input type="checkbox"> 처리내역(폴더)</label></div>
-    </details>
-    <details><summary>01. 연속간행물_점검내역서</summary>
-        <div><label><input type="checkbox"> 점검내역(폴더)</label></div>
-    </details>
-    <details><summary>02. 연속간행물_품질점검내역서</summary>
-        <div><label><input type="checkbox"> 품질점검내역서</label></div>
-    </details>
-    <details><summary>01. 연속간행물_납품서</summary>
-        <div><label><input type="checkbox"> 납품서</label></div>
-    </details>
-</details>
-<details><summary>02. 연속간행물_점검요청서</summary>
-    <div><label><input type="checkbox"> 점검요청서</label></div>
-</details>
-<details><summary>03. 연속간행물_재점검요청서</summary>
-    <div><label><input type="checkbox"> 재점검요청서</label></div>
-</details>
-<details><summary>03. 연계 서지데이터</summary>
-    <details><summary>01. 연계 서지데이터_처리내역서</summary>
-        <div><label><input type="checkbox"> 처리내역(폴더)</label></div>
-    </details>
-    <details><summary>01. 연계 서지데이터_점검내역서</summary>
-        <div><label><input type="checkbox"> 점검내역(폴더)</label></div>
-    </details>
-    <details><summary>01. 연계 서지데이터_납품서</summary>
-        <div><label><input type="checkbox"> 납품서</label></div>
-    </details>
-</details>
-<details><summary>02. 연계 서지데이터_점검요청서</summary>
-    <div><label><input type="checkbox"> 점검요청서</label></div>
-</details>
-<details><summary>03. 연계 서지데이터_재점검요청서</summary>
-    <div><label><input type="checkbox"> 재점검요청서</label></div>
-</details>
-<details><summary>03. 예외사항</summary>
-    <div><label><input type="checkbox"> 예외처리계획서(DB구축)</label></div>
-</details>
-<details><summary>03. 자료점검</summary>
-    <details><summary>01. 단행자료</summary>
-        <details><summary>01. 단행자료_중복데이터 점검내역서</summary>
-            <div><label><input type="checkbox"> 점검내역(폴더)</label></div>
-        </details>
-    </details>
-    <details><summary>01. 통합_점검내역서</summary>
-        <div><label><input type="checkbox"> 점검내역(폴더)</label></div>
-    </details>
-</details>
-<details><summary>02. 단행자료_재구축요청서</summary>
-    <div><label><input type="checkbox"> 재구축요청서</label></div>
-</details>
-<details><summary>02. 연속간행물_재구축요청서</summary>
-    <div><label><input type="checkbox"> 재구축요청서</label></div>
-</details>
-<details><summary>02. 연계 서지데이터_재구축요청서</summary>
-    <div><label><input type="checkbox"> 재구축요청서</label></div>
-</details>
-<details><summary>04. 품질점검</summary>
-    <details><summary>01. 단행자료</summary>
-        <details><summary>01. 단행자료_품질점검내역서</summary>
-            <div><label><input type="checkbox"> 품질점검내역서</label></div>
-        </details>
-    </details>
-    <details><summary>01. 통합_품질점검내역서</summary>
-        <div><label><input type="checkbox"> 품질점검내역서</label></div>
-    </details>
-</details>
-<details><summary>05. 납품</summary>
-    <details><summary>01. 단행자료</summary>
-        <details><summary>01. 단행자료_납품서</summary>
-            <div><label><input type="checkbox"> 납품서</label></div>
-        </details>
-    </details>
-    <details><summary>01. 통합_납품서</summary>
-        <div><label><input type="checkbox"> 납품서</label></div>
-    </details>
-</details>
-<details><summary>02. 단행자료_점검서</summary>
-    <div><label><input type="checkbox"> 점검서</label></div>
-</details>
-<details><summary>02. 연속간행물_점검서</summary>
-    <div><label><input type="checkbox"> 점검서</label></div>
-</details>
-<details><summary>02. 연계 서지데이터_점검서</summary>
-    <div><label><input type="checkbox"> 점검서</label></div>
-</details>
-<details><summary>03. 운영DB 데이터
-품질관리</summary>
-    <details><summary>00. 시험공정</summary>
-        <details><summary>01. 계획</summary>
-            <div><label><input type="checkbox"> 시험공정계획서</label></div>
-        </details>
-    </details>
-</details>
-<details><summary>02. 자료통합</summary>
-    <details><summary>01. 통합_처리내역서</summary>
-        <div><label><input type="checkbox"> 처리내역(폴더)</label></div>
-    </details>
-</details>
-<details><summary>02. 통합_점검요청서</summary>
-    <div><label><input type="checkbox"> 점검요청서</label></div>
-</details>
-<details><summary>03. 통합_재점검요청서</summary>
-    <div><label><input type="checkbox"> 재점검요청서</label></div>
-</details>
-<details><summary>02. 통합_재구축요청서</summary>
-    <div><label><input type="checkbox"> 재구축요청서</label></div>
-</details>
-<details><summary>02. 통합_점검서</summary>
-    <div><label><input type="checkbox"> 점검서</label></div>
-</details>
-<details><summary>09. 저작관리</summary>
-    <div><label><input type="checkbox"> 저작데이터처리내역</label></div>
-</details>
-<details><summary>10. 총서통합</summary>
-    <div><label><input type="checkbox"> 납품서</label></div>
-</details>
-<details><summary>사업완료</summary>
-    <details><summary>01. 준공요청</summary>
-    </details>
-</details>
-<details><summary>02. 완료보고서</summary>
-    <details><summary>완료보고서</summary>
-        <div><label><input type="checkbox"> 완료보고서</label></div>
-    </details>
-</details>
-<details><summary>03. 최종산출물</summary>
-</details>
+<h2>📋 PM 대시보드 체크리스트 (Notion Style)</h2>
+<table>
+<tr><th>분류</th><th>문서명</th><th>문서추적ID</th><th>체크</th></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문서명</td><td>문서명</td><td>문서추적 ID(**_일련번호)</td><td><input type="checkbox" id="cb0"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제안요청서(2025년 국가자료종합목록 데이터 품질관리) 최종</td><td>제안요청서(2025년 국가자료종합목록 데이터 품질관리) 최종</td><td></td><td><input type="checkbox" id="cb1"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025년 국가자료종합목록 데이터 품질관리 사업_정성적제안서_데이터클립컨소시엄</td><td>2025년 국가자료종합목록 데이터 품질관리 사업_정성적제안서_데이터클립컨소시엄</td><td></td><td><input type="checkbox" id="cb2"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025년 국가자료종합목록 데이터 품질관리 사업_발표자료_데이터클립컨소시엄</td><td>2025년 국가자료종합목록 데이터 품질관리 사업_발표자료_데이터클립컨소시엄</td><td></td><td><input type="checkbox" id="cb3"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-</td><td>-</td><td>폴더</td><td><input type="checkbox" id="cb4"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2025년 국자자료종합목록 데이터 품질관리_계약서</td><td>2025년 국자자료종합목록 데이터 품질관리_계약서</td><td></td><td><input type="checkbox" id="cb5"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;착수계</td><td>착수계</td><td></td><td><input type="checkbox" id="cb6"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;사업수행계획서</td><td>사업수행계획서</td><td></td><td><input type="checkbox" id="cb7"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;과업대비표</td><td>과업대비표</td><td>A_101_009</td><td><input type="checkbox" id="cb8"></td></tr>
+<tr><td>요구사항정의서</td><td>요구사항정의서</td><td>A_101_004</td><td><input type="checkbox" id="cb9"></td></tr>
+<tr><td>요구사항명세서</td><td>요구사항명세서</td><td>A_101_005</td><td><input type="checkbox" id="cb10"></td></tr>
+<tr><td>요구사항추적표</td><td>요구사항추적표</td><td>A_101_006</td><td><input type="checkbox" id="cb11"></td></tr>
+<tr><td>검사기준서</td><td>검사기준서</td><td>A_101_007</td><td><input type="checkbox" id="cb12"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DB구축일정계획</td><td>DB구축일정계획</td><td>A_102S_001</td><td><input type="checkbox" id="cb13"></td></tr>
+<tr><td>WBS</td><td>WBS</td><td>A_101_008</td><td><input type="checkbox" id="cb14"></td></tr>
+<tr><td>품질관리일정계획</td><td>품질관리일정계획</td><td>A_102S_002</td><td><input type="checkbox" id="cb15"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;인력관리지침서</td><td>인력관리지침서</td><td>A_102_001</td><td><input type="checkbox" id="cb16"></td></tr>
+<tr><td>인력투입계획서</td><td>인력투입계획서</td><td>A_102_002</td><td><input type="checkbox" id="cb17"></td></tr>
+<tr><td>인력투입현황보고서</td><td>인력투입현황보고서</td><td>A_102_003</td><td><input type="checkbox" id="cb18"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;출근부</td><td>출근부</td><td>A_102_004</td><td><input type="checkbox" id="cb19"></td></tr>
+<tr><td>출퇴근관리대장</td><td>출퇴근관리대장</td><td></td><td><input type="checkbox" id="cb20"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;회의록_주간보고</td><td>회의록_주간보고</td><td>A_108_001</td><td><input type="checkbox" id="cb21"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;착수보고</td><td>착수보고</td><td>A_101_001</td><td><input type="checkbox" id="cb22"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;중간보고</td><td>중간보고</td><td>A_103S_003</td><td><input type="checkbox" id="cb23"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;완료보고</td><td>완료보고</td><td>A_101_002</td><td><input type="checkbox" id="cb24"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주간보고서</td><td>주간보고서</td><td>A_103S_002</td><td><input type="checkbox" id="cb25"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;월간보고서</td><td>월간보고서</td><td>A_103S_001</td><td><input type="checkbox" id="cb26"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;교육계획서</td><td>교육계획서</td><td>A_713C_001</td><td><input type="checkbox" id="cb27"></td></tr>
+<tr><td>[별첨1]교육프로그램</td><td>[별첨1]교육프로그램</td><td>A_713C_002</td><td><input type="checkbox" id="cb28"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[별첨2]교육실시현황표</td><td>[별첨2]교육실시현황표</td><td>A_715C_001</td><td><input type="checkbox" id="cb29"></td></tr>
+<tr><td>[별첨3]교육확인서</td><td>[별첨3]교육확인서</td><td>A_715C_002</td><td><input type="checkbox" id="cb30"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[별첨1]국가자료종합목록 데이터 품질관리 지침</td><td>[별첨1]국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb31"></td></tr>
+<tr><td>[별첨3]보안교육자료</td><td>[별첨3]보안교육자료</td><td>A_0_003</td><td><input type="checkbox" id="cb32"></td></tr>
+<tr><td>[별첨4]MARC교육</td><td>[별첨4]MARC교육</td><td>A_0_004</td><td><input type="checkbox" id="cb33"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보안관리지침서</td><td>보안관리지침서</td><td>A_159C_002</td><td><input type="checkbox" id="cb34"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KOLIS-NET ID 신청 및 삭제</td><td></td><td>폴더</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;보안카드발급</td><td></td><td>폴더</td><td></td></tr>
+<tr><td>[별첨1]보안서약서</td><td>[별첨1]보안서약서</td><td>폴더</td><td><input type="checkbox" id="cb37"></td></tr>
+<tr><td>[별첨2]개인정보 위탁 보안서약서</td><td>[별첨2]개인정보 위탁 보안서약서</td><td>폴더</td><td><input type="checkbox" id="cb38"></td></tr>
+<tr><td>[별첨3]보안확약서</td><td>[별첨3]보안확약서</td><td>폴더</td><td><input type="checkbox" id="cb39"></td></tr>
+<tr><td>(별첨4)출입대장</td><td>(별첨4)출입대장</td><td>A_159C_003</td><td><input type="checkbox" id="cb40"></td></tr>
+<tr><td>(별첨5)산출물보안확인대장</td><td>(별첨5)산출물보안확인대장</td><td>A_159C_004</td><td><input type="checkbox" id="cb41"></td></tr>
+<tr><td>(별첨6)PC보안관리대장</td><td>(별첨6)PC보안관리대장</td><td>A_159C_005</td><td><input type="checkbox" id="cb42"></td></tr>
+<tr><td>[별첨7]장비관리대장</td><td>[별첨7]장비관리대장</td><td>A_159C_006</td><td><input type="checkbox" id="cb43"></td></tr>
+<tr><td>(별첨8)이동식저장장치사용관리대장</td><td>(별첨8)이동식저장장치사용관리대장</td><td>A_159C_007</td><td><input type="checkbox" id="cb44"></td></tr>
+<tr><td>(별첨9)KOLIS-NET ID 신청서</td><td>(별첨9)KOLIS-NET ID 신청서</td><td>A_159C_008</td><td><input type="checkbox" id="cb45"></td></tr>
+<tr><td>(별첨10)자료관리대장</td><td>(별첨10)자료관리대장</td><td>A_159C_009</td><td><input type="checkbox" id="cb46"></td></tr>
+<tr><td>(별첨11)KOLIS-NET ID 삭제요청서</td><td>(별첨11)KOLIS-NET ID 삭제요청서</td><td>A_159C_010</td><td><input type="checkbox" id="cb47"></td></tr>
+<tr><td>비밀유지 계약서</td><td>비밀유지 계약서</td><td></td><td><input type="checkbox" id="cb48"></td></tr>
+<tr><td>접근권한신청서_2025년 사업</td><td>접근권한신청서_2025년 사업</td><td></td><td><input type="checkbox" id="cb49"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03. 정보보안점검</td><td></td><td>폴더</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04. 안전보건협의체</td><td></td><td>폴더</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위험관리계획서</td><td>위험관리계획서</td><td>A_104S_001</td><td><input type="checkbox" id="cb52"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[별첨1]위험관리리스트</td><td>[별첨1]위험관리리스트</td><td>A_104S_002</td><td><input type="checkbox" id="cb53"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;백업및복구방안</td><td>백업및복구방안</td><td>A_159C_011</td><td><input type="checkbox" id="cb54"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[별첨1]백업,복구관리대장</td><td>[별첨1]백업,복구관리대장</td><td>A_159C_012</td><td><input type="checkbox" id="cb55"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;변경관리계획서</td><td>변경관리계획서</td><td>A_107_001</td><td><input type="checkbox" id="cb56"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[별첨1]변경관리리스트</td><td>[별첨1]변경관리리스트</td><td>A_102S_001</td><td><input type="checkbox" id="cb57"></td></tr>
+<tr><td>[별첨2]변경관리요청서</td><td>[별첨2]변경관리요청서</td><td>A_102S_001_</td><td><input type="checkbox" id="cb58"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;형상관리계획서</td><td>형상관리계획서</td><td>A_106S_001</td><td><input type="checkbox" id="cb59"></td></tr>
+<tr><td>형상관리기록서</td><td>형상관리기록서</td><td>A_106S_002</td><td><input type="checkbox" id="cb60"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;문서작성표준</td><td>문서작성표준</td><td>A_109_001</td><td><input type="checkbox" id="cb61"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;품질보증계획서</td><td>품질보증계획서</td><td>A_293C_001</td><td><input type="checkbox" id="cb62"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[별첨1]품질보증결과보고서</td><td>[별첨1]품질보증결과보고서</td><td>A_104_001</td><td><input type="checkbox" id="cb63"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;파일분류체계표</td><td>파일분류체계표</td><td>A_104_002</td><td><input type="checkbox" id="cb64"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;데이터처리현황</td><td>데이터처리현황</td><td>A_404_001</td><td><input type="checkbox" id="cb65"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;하자보수계획서</td><td>하자보수계획서</td><td>A_110_001</td><td><input type="checkbox" id="cb66"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;기술이전계획서</td><td>기술이전계획서</td><td>A_110_002</td><td><input type="checkbox" id="cb67"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;모니터링 내역서</td><td>모니터링 내역서</td><td>G_201_001</td><td><input type="checkbox" id="cb68"></td></tr>
+<tr><td>[별첨]모니터링 내역서</td><td>[별첨]모니터링 내역서</td><td>G_201_001</td><td><input type="checkbox" id="cb69"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb70"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;수정요청서</td><td>수정요청서</td><td>G_201_002</td><td><input type="checkbox" id="cb71"></td></tr>
+<tr><td>[별첨]수정요청서</td><td>[별첨]수정요청서</td><td>G_201_002</td><td><input type="checkbox" id="cb72"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;개별 안내 내역서</td><td>개별 안내 내역서</td><td>G_201_003</td><td><input type="checkbox" id="cb73"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;워크숍 회의록</td><td>워크숍 회의록</td><td>G_001_002</td><td><input type="checkbox" id="cb74"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;참여기관 대상_설문조사분석서</td><td>참여기관 대상_설문조사분석서</td><td>G_001_003</td><td><input type="checkbox" id="cb75"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KOLIS-NET 기능개선 요청사항</td><td>KOLIS-NET 기능개선 요청사항</td><td>G_203_001</td><td><input type="checkbox" id="cb76"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;대표서지 모니터링 내역서</td><td>대표서지 모니터링 내역서</td><td>G_201_004</td><td><input type="checkbox" id="cb77"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시험공정계획서</td><td>시험공정계획서</td><td>B_001_001</td><td><input type="checkbox" id="cb78"></td></tr>
+<tr><td>시험공정인수대장</td><td>시험공정인수대장</td><td>B_001_002</td><td><input type="checkbox" id="cb79"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시험공정결과서</td><td>시험공정결과서</td><td>B_002_001</td><td><input type="checkbox" id="cb80"></td></tr>
+<tr><td>단행자료</td><td>단행자료</td><td>폴더</td><td><input type="checkbox" id="cb81"></td></tr>
+<tr><td>연속간행물</td><td>연속간행물</td><td>폴더</td><td><input type="checkbox" id="cb82"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;인수대장</td><td>인수대장</td><td>B_101_001</td><td><input type="checkbox" id="cb83"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;처리내역(폴더)</td><td>처리내역(폴더)</td><td>C_475T_002</td><td><input type="checkbox" id="cb84"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검요청서</td><td>점검요청서</td><td>C_271C_001</td><td><input type="checkbox" id="cb85"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재점검요청서</td><td>재점검요청서</td><td>C_271C_002</td><td><input type="checkbox" id="cb86"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb87"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;처리내역(폴더)</td><td>처리내역(폴더)</td><td>C_475T_003</td><td><input type="checkbox" id="cb88"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검요청서</td><td>점검요청서</td><td>C_271C_003</td><td><input type="checkbox" id="cb89"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재점검요청서</td><td>재점검요청서</td><td>C_271C_004</td><td><input type="checkbox" id="cb90"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb91"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;처리내역(폴더)</td><td>처리내역(폴더)</td><td>C_475T_004</td><td><input type="checkbox" id="cb92"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검요청서</td><td>점검요청서</td><td>C_271C_005</td><td><input type="checkbox" id="cb93"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재점검요청서</td><td>재점검요청서</td><td>C_271C_006</td><td><input type="checkbox" id="cb94"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb95"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;예외처리계획서(DB구축)</td><td>예외처리계획서(DB구축)</td><td>A_411T_001</td><td><input type="checkbox" id="cb96"></td></tr>
+<tr><td>예외처리리스트</td><td>예외처리리스트</td><td>A_411T_002</td><td><input type="checkbox" id="cb97"></td></tr>
+<tr><td>예외처리리스트 상세</td><td>예외처리리스트 상세</td><td>A_411T_003</td><td><input type="checkbox" id="cb98"></td></tr>
+<tr><td>구축제외</td><td>구축제외</td><td>A_411T_004</td><td><input type="checkbox" id="cb99"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검내역(폴더)</td><td>점검내역(폴더)</td><td>D_813C_002</td><td><input type="checkbox" id="cb100"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재구축요청서</td><td>재구축요청서</td><td>D_813C_005</td><td><input type="checkbox" id="cb101"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb102"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검내역(폴더)</td><td>점검내역(폴더)</td><td>D_813C_003</td><td><input type="checkbox" id="cb103"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재구축요청서</td><td>재구축요청서</td><td>D_813C_006</td><td><input type="checkbox" id="cb104"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb105"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검내역(폴더)</td><td>점검내역(폴더)</td><td>D_813C_004</td><td><input type="checkbox" id="cb106"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재구축요청서</td><td>재구축요청서</td><td>D_813C_007</td><td><input type="checkbox" id="cb107"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb108"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;품질점검내역서</td><td>품질점검내역서</td><td>E_871C_001</td><td><input type="checkbox" id="cb109"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;품질점검내역서</td><td>품질점검내역서</td><td>E_871C_002</td><td><input type="checkbox" id="cb110"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;납품서</td><td>납품서</td><td>F_835C_001</td><td><input type="checkbox" id="cb111"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검서</td><td>점검서</td><td>F_835C_002</td><td><input type="checkbox" id="cb112"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;납품서</td><td>납품서</td><td>F_835C_003</td><td><input type="checkbox" id="cb113"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검서</td><td>점검서</td><td>F_835C_004</td><td><input type="checkbox" id="cb114"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;납품서</td><td>납품서</td><td>F_835C_005</td><td><input type="checkbox" id="cb115"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검서</td><td>점검서</td><td>F_835C_006</td><td><input type="checkbox" id="cb116"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시험공정계획서</td><td>시험공정계획서</td><td>B_001_001</td><td><input type="checkbox" id="cb117"></td></tr>
+<tr><td>시험공정인수대장</td><td>시험공정인수대장</td><td>H_001_002</td><td><input type="checkbox" id="cb118"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시험공정결과서</td><td>시험공정결과서</td><td>B_002_001</td><td><input type="checkbox" id="cb119"></td></tr>
+<tr><td>운영서지중복데이터 통합</td><td>운영서지중복데이터 통합</td><td>폴더</td><td><input type="checkbox" id="cb120"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;인수대장</td><td>인수대장</td><td>H_101_001</td><td><input type="checkbox" id="cb121"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;처리내역(폴더)</td><td>처리내역(폴더)</td><td>H_475T_001</td><td><input type="checkbox" id="cb122"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검요청서</td><td>점검요청서</td><td>H_271C_001</td><td><input type="checkbox" id="cb123"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재점검요청서</td><td>재점검요청서</td><td>H_271C_002</td><td><input type="checkbox" id="cb124"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb125"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검내역(폴더)</td><td>점검내역(폴더)</td><td>H_813C_001</td><td><input type="checkbox" id="cb126"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;재구축요청서</td><td>재구축요청서</td><td>H_813C_002</td><td><input type="checkbox" id="cb127"></td></tr>
+<tr><td>국가자료종합목록 데이터 품질관리 지침</td><td>국가자료종합목록 데이터 품질관리 지침</td><td>A_0_001</td><td><input type="checkbox" id="cb128"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;품질점검내역서</td><td>품질점검내역서</td><td>E_871C_003</td><td><input type="checkbox" id="cb129"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;납품서</td><td>납품서</td><td>H_835C_001</td><td><input type="checkbox" id="cb130"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;점검서</td><td>점검서</td><td>H_835C_002</td><td><input type="checkbox" id="cb131"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;저작데이터처리내역</td><td>저작데이터처리내역</td><td>H_002_001</td><td><input type="checkbox" id="cb132"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;납품서</td><td>납품서</td><td>H_835C_001</td><td><input type="checkbox" id="cb133"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01. 준공요청</td><td></td><td>폴더</td><td></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;완료보고서</td><td>완료보고서</td><td>A_101_003</td><td><input type="checkbox" id="cb135"></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03. 최종산출물</td><td></td><td>폴더</td><td></td></tr>
 
+</table>
 </body>
 </html>
