@@ -1,6 +1,21 @@
 
 <!DOCTYPE html><html><head><meta charset='UTF-8'><title>Checklist</title>
 <style>
+
+/* Responsive column widths */
+th:nth-child(1), td:nth-child(1) { width:7%; }
+th:nth-child(2), td:nth-child(2) { width:7%; }
+th:nth-child(3), td:nth-child(3) { width:7%; }
+th:nth-child(4), td:nth-child(4) { width:7%; }
+th:nth-child(5), td:nth-child(5) { width:7%; }
+th:nth-child(6), td:nth-child(6) { width:35%; }
+th:nth-child(7), td:nth-child(7) { width:6%; }
+th:nth-child(8), td:nth-child(8) { width:9%; }
+th:nth-child(9), td:nth-child(9) { width:4%; } /* checkbox small */
+th:nth-child(10), td:nth-child(10) { width:15%; }
+table { table-layout: fixed; width: 100%; }
+th, td { white-space: normal; }
+
 body{font-family:Arial;background:#f7f9fb;padding:20px;}
 table{width:100%;border-collapse:collapse;background:white;table-layout:fixed;}
 th,td{border:1px solid #ddd;padding:6px;font-size:12px;word-wrap:break-word;}
@@ -105,7 +120,7 @@ document.addEventListener("DOMContentLoaded",function(){
 <div id="summary">완료 여부: 0 / 0 개</div>
 
 <table><tr>
-<th id='th1'><span class='icon-btn' id='ic1' data-state='open' onclick='toggleCol(1,"ic1","th1")'>▼</span><span class='col-label'>1차분류</span></th><th id='th2'><span class='icon-btn' id='ic2' data-state='open' onclick='toggleCol(2,"ic2","th2")'>▼</span><span class='col-label'>2차분류</span></th><th id='th3'><span class='icon-btn' id='ic3' data-state='open' onclick='toggleCol(3,"ic3","th3")'>▼</span><span class='col-label'>3차분류</span></th><th id='th4'><span class='icon-btn' id='ic4' data-state='open' onclick='toggleCol(4,"ic4","th4")'>▼</span><span class='col-label'>4차분류</span></th><th id='th5'><span class='icon-btn' id='ic5' data-state='open' onclick='toggleCol(5,"ic5","th5")'>▼</span><span class='col-label'>5차분류</span></th><th>문서명</th><th>문서추적 ID(**_일련번호)</th><th>파일 생성 주기</th><th>완료 시 체크</th><th>비고</th></tr>
+<th id='th1'><span class='icon-btn' id='ic1' data-state='open' onclick='toggleCol(1,"ic1","th1")'>▼</span><span class='col-label'>1차분류</span></th><th id='th2'><span class='icon-btn' id='ic2' data-state='open' onclick='toggleCol(2,"ic2","th2")'>▼</span><span class='col-label'>2차분류</span></th><th id='th3'><span class='icon-btn' id='ic3' data-state='open' onclick='toggleCol(3,"ic3","th3")'>▼</span><span class='col-label'>3차분류</span></th><th id='th4'><span class='icon-btn' id='ic4' data-state='open' onclick='toggleCol(4,"ic4","th4")'>▼</span><span class='col-label'>4차분류</span></th><th id='th5'><span class='icon-btn' id='ic5' data-state='open' onclick='toggleCol(5,"ic5","th5")'>▼</span><span class='col-label'>5차분류</span></th><th>문서명</th><th>문서추적 ID</th><th>파일 생성 주기</th><th>완료 시 체크</th><th>비고</th></tr>
 <tr class=''><td class=''>00. 사업준비</td><td class=''>01. RFP</td><td class=''></td><td class=''></td><td class=''></td><td class='doc-name'>제안요청서(2025년 국가자료종합목록 데이터 품질관리) 최종</td><td class=''></td><td class=''></td><td><input type='checkbox' class='cb' id='cb0'></td><td><input type='text' class='memo' id='memo0' style='width:98%'></td></tr>
 <tr class=''><td class=''></td><td class=''>02. 제안서</td><td class=''></td><td class=''></td><td class=''></td><td class='doc-name'>2025년 국가자료종합목록 데이터 품질관리 사업_정성적제안서_데이터클립컨소시엄</td><td class=''></td><td class=''></td><td><input type='checkbox' class='cb' id='cb1'></td><td><input type='text' class='memo' id='memo1' style='width:98%'></td></tr>
 <tr class=''><td class=''></td><td class=''>03. 발표자료</td><td class=''></td><td class=''></td><td class=''></td><td class='doc-name'>2025년 국가자료종합목록 데이터 품질관리 사업_발표자료_데이터클립컨소시엄</td><td class=''></td><td class=''></td><td><input type='checkbox' class='cb' id='cb2'></td><td><input type='text' class='memo' id='memo2' style='width:98%'></td></tr>
